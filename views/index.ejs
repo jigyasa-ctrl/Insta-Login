@@ -1,0 +1,164 @@
+<style>
+    body{
+        background: whitesmoke;
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+    }
+    nav
+    .nav-container{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding:10px;
+        background-color: white;;
+    }
+    .logo span{
+       /* display:flex;
+        justify-content: center;*/
+        image-orientation: center;
+    }
+    .notification img{
+        margin:10px;
+
+    }
+    section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size:30px;
+
+    }
+    #username{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        left:50px;
+
+    }
+    #username img:nth-child(1){
+        margin:20px;
+        border-radius: 50%;
+    }
+    #username h1, #username button{
+        margin:20px;
+        font-size:40px;
+        font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+    #username button{
+        background-color: rgb(77, 121, 216);
+        padding:10px;
+        height:50px;
+        color:white;
+        border-style: none;
+        cursor:pointer;
+
+    }
+    
+    #images1 img{
+        height: 100px;
+        cursor:pointer;
+        border-radius: 50%;
+        margin-top:20px;
+        margin-bottom: 20px;
+        border-style:double;
+        transition: transform 0.3s ease-in;
+    }
+    #images1 img:hover{
+        opacity: 0.8;
+        transform: scale(1.1);
+    }
+    #images img{
+        height:300px;
+        cursor: pointer;
+        transition: transform 0.3s ease-in;
+    }
+    #images img:hover{
+        transform: scale(1.1);
+    }
+   </style>
+<head>
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+   
+</head>
+<nav>
+    <div class='nav-container'>
+    <div class='logo'>
+        <img src="https://img.icons8.com/fluent/40/000000/instagram-new.png"/>
+        <span><img src='https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png'></span>
+       
+    </div>
+
+    <div>
+        <i class="fas fa-search"></i>
+        <input style='background-color:#E8F0FE ;' placeholder="search">
+    </div>
+
+    <div class='notification'>
+        <img src="https://img.icons8.com/material-sharp/30/000000/home.png"/>
+        <img src="https://img.icons8.com/material-sharp/30/000000/filled-sent.png"/>
+        <img src="https://img.icons8.com/material-sharp/30/000000/worldwide-location.png"/>
+        <img src="https://img.icons8.com/material-sharp/30/000000/like.png"/>
+        <img src="https://img.icons8.com/material-sharp/30/000000/name.png"/>
+    </div>
+</div>
+</nav>
+
+<section>
+    <div id='username'>
+        <div><img src='https://instagram.fdel1-3.fna.fbcdn.net/v/t51.2885-15/e35/c0.126.1015.1015a/s480x480/92824325_987620851654772_5677098506827007941_n.jpg?_nc_ht=instagram.fdel1-3.fna.fbcdn.net&_nc_cat=108&_nc_ohc=AhNNftadUzQAX_nvyPr&oh=4bbbf069dbd7d59fbc24d960b27dccfb&oe=5F135C5B'></div>
+        <div>
+            <h1>Hello! @<%= name %>
+                <img src="https://img.icons8.com/color/48/000000/verified-badge.png"/></h1>
+            <form action='/logout?_method=DELETE' method='POST'>
+                <BUTTON style='font-size: 20px;'type='submit'>Log out</BUTTON>
+                </form>
+        </div>
+    </div>
+
+    <div>
+        <p>If you're already a front-end developer, well, pretend you're also wearing a pirate hat.</p>
+    </div>
+
+    <div id='images1'>
+        <img alt="Paper cutout illustration of a person outdoors surrounded by colorful plants." class="FFVAD" decoding="auto" sizes="264.66796875px" srcset="https://instagram.fdel1-3.fna.fbcdn.net/v/t51.2885-15/e35/c0.180.1440.1440a/s150x150/104298250_558037038207632_4572936380148135183_n.jpg?_nc_ht=instagram.fdel1-3.fna.fbcdn.net&amp;_nc_cat=1&amp;_nc_ohc=48zbu221S28AX9bf2wm&amp;oh=a437d165ced7818fe8fed3e4b7488620&amp;oe=5F142574 150w,https://instagram.fdel1-3.fna.fbcdn.net/v/t51.2885-15/e35/c0.180.1440.1440a/s240x240/104298250_558037038207632_4572936380148135183_n.jpg?_nc_ht=instagram.fdel1-3.fna.fbcdn.net&amp;_nc_cat=1&amp;_nc_ohc=48zbu221S28AX9bf2wm&amp;oh=d25bc42f548380593094bb2b5152472e&amp;oe=5F13BC76 240w,https://instagram.fdel1-3.fna.fbcdn.net/v/t51.2885-15/e35/c0.180.1440.1440a/s320x320/104298250_558037038207632_4572936380148135183_n.jpg?_nc_ht=instagram.fdel1-3.fna.fbcdn.net&amp;_nc_cat=1&amp;_nc_ohc=48zbu221S28AX9bf2wm&amp;oh=db40d1c32ca9f13b088c2176ceefb126&amp;oe=5F12C68C 320w,https://instagram.fdel1-3.fna.fbcdn.net/v/t51.2885-15/e35/c0.180.1440.1440a/s480x480/104298250_558037038207632_4572936380148135183_n.jpg?_nc_ht=instagram.fdel1-3.fna.fbcdn.net&amp;_nc_cat=1&amp;_nc_ohc=48zbu221S28AX9bf2wm&amp;oh=99a64b8d03c4c9c837c0909bbf3afbc3&amp;oe=5F123DCD 480w,https://instagram.fdel1-3.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/c0.180.1440.1440a/s640x640/104298250_558037038207632_4572936380148135183_n.jpg?_nc_ht=instagram.fdel1-3.fna.fbcdn.net&amp;_nc_cat=1&amp;_nc_ohc=48zbu221S28AX9bf2wm&amp;oh=66133aff2c027fb95ab1419253cfdd31&amp;oe=5F1311C4 640w" src="https://instagram.fdel1-3.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/c0.180.1440.1440a/s640x640/104298250_558037038207632_4572936380148135183_n.jpg?_nc_ht=instagram.fdel1-3.fna.fbcdn.net&amp;_nc_cat=1&amp;_nc_ohc=48zbu221S28AX9bf2wm&amp;oh=66133aff2c027fb95ab1419253cfdd31&amp;oe=5F1311C4" style="object-fit: cover;">
+       <img src='https://instagram.fdel1-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/s640x640/101521086_669122623665322_2577338025514501499_n.jpg?_nc_ht=instagram.fdel1-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=4Rm7QyVzrbsAX_1M8qI&oh=f2851d87724c9aadd6f8731719544e5c&oe=5F147037'>
+       <img src='https://instagram.fdel1-3.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/c0.169.1349.1349a/s640x640/100997171_294137304935173_5707609764834803460_n.jpg?_nc_ht=instagram.fdel1-3.fna.fbcdn.net&_nc_cat=1&_nc_ohc=GI0ePw2vC3wAX-8n-gh&oh=aee2d8c533c2285d1f9b21f464092125&oe=5F11C07F'>
+       <img src='https://instagram.fdel1-3.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/c0.169.1349.1349a/s640x640/100666379_188806665643384_3896688828975370064_n.jpg?_nc_ht=instagram.fdel1-3.fna.fbcdn.net&_nc_cat=1&_nc_ohc=KK5avrxhEqIAX_TbmiA&oh=9a754284655a9e0a7a96dabd239509b7&oe=5F12F062'>
+       <img src='https://instagram.fdel1-3.fna.fbcdn.net/v/t51.2885-15/e35/s320x320/100898960_698094117644946_5421229625457270821_n.jpg?_nc_ht=instagram.fdel1-3.fna.fbcdn.net&_nc_cat=1&_nc_ohc=aqNlIk6OEoYAX9MCGg3&oh=84d905444179355980b8bd1280f9fbb6&oe=5F1181F5'>
+       <img src='https://instagram.fdel1-3.fna.fbcdn.net/v/t51.2885-15/e35/c0.169.1349.1349a/s320x320/97249868_604016993535237_3443931848117355368_n.jpg?_nc_ht=instagram.fdel1-3.fna.fbcdn.net&_nc_cat=1&_nc_ohc=FtGY4dzRbAEAX_KPGqQ&oh=e7531fbcf788170654a2b1b27e946624&oe=5F1407F1'>
+        <img src='https://instagram.fdel1-3.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/c0.169.1349.1349a/s640x640/94928602_822602978231046_8493666583539336905_n.jpg?_nc_ht=instagram.fdel1-3.fna.fbcdn.net&_nc_cat=106&_nc_ohc=zBwIbrIZeGoAX8KY35s&oh=df01f44fdb856191c1832bc4eae4c4e9&oe=5F121715'>
+        <img src='https://instagram.fdel1-2.fna.fbcdn.net/v/t51.2885-15/e35/c133.0.561.561a/s320x320/103097101_285654252481795_8808760636381151491_n.jpg?_nc_ht=instagram.fdel1-2.fna.fbcdn.net&_nc_cat=107&_nc_ohc=qfV47o_6U0oAX9ZX_Jw&oh=128b4809ec46bd4f737a90d192f41597&oe=5F117C49'>
+        <img src='https://instagram.fdel1-2.fna.fbcdn.net/v/t51.2885-15/e35/92022831_146623786863028_6274520438788977337_n.jpg?_nc_ht=instagram.fdel1-2.fna.fbcdn.net&_nc_cat=104&_nc_ohc=QQxBVs0wjlAAX8AI_Ja&oh=4ee5eba80f8d4cfd2552a11cea5a2cf6&oe=5F143B4E'>
+        <img src='https://instagram.fdel1-2.fna.fbcdn.net/v/t51.2885-15/e35/c87.0.575.575a/90145884_495229534688440_7049357998634361866_n.jpg?_nc_ht=instagram.fdel1-2.fna.fbcdn.net&_nc_cat=104&_nc_ohc=x1pdcEz60n8AX-ZpBIu&oh=d63ee073c5e37c7038137b1e1536ba4f&oe=5F1281E5'>
+        
+    </div>
+
+    <div id='images'>
+        <img alt="Paper cutout illustration of a person outdoors surrounded by colorful plants." class="FFVAD" decoding="auto" sizes="264.66796875px" srcset="https://instagram.fdel1-3.fna.fbcdn.net/v/t51.2885-15/e35/c0.180.1440.1440a/s150x150/104298250_558037038207632_4572936380148135183_n.jpg?_nc_ht=instagram.fdel1-3.fna.fbcdn.net&amp;_nc_cat=1&amp;_nc_ohc=48zbu221S28AX9bf2wm&amp;oh=a437d165ced7818fe8fed3e4b7488620&amp;oe=5F142574 150w,https://instagram.fdel1-3.fna.fbcdn.net/v/t51.2885-15/e35/c0.180.1440.1440a/s240x240/104298250_558037038207632_4572936380148135183_n.jpg?_nc_ht=instagram.fdel1-3.fna.fbcdn.net&amp;_nc_cat=1&amp;_nc_ohc=48zbu221S28AX9bf2wm&amp;oh=d25bc42f548380593094bb2b5152472e&amp;oe=5F13BC76 240w,https://instagram.fdel1-3.fna.fbcdn.net/v/t51.2885-15/e35/c0.180.1440.1440a/s320x320/104298250_558037038207632_4572936380148135183_n.jpg?_nc_ht=instagram.fdel1-3.fna.fbcdn.net&amp;_nc_cat=1&amp;_nc_ohc=48zbu221S28AX9bf2wm&amp;oh=db40d1c32ca9f13b088c2176ceefb126&amp;oe=5F12C68C 320w,https://instagram.fdel1-3.fna.fbcdn.net/v/t51.2885-15/e35/c0.180.1440.1440a/s480x480/104298250_558037038207632_4572936380148135183_n.jpg?_nc_ht=instagram.fdel1-3.fna.fbcdn.net&amp;_nc_cat=1&amp;_nc_ohc=48zbu221S28AX9bf2wm&amp;oh=99a64b8d03c4c9c837c0909bbf3afbc3&amp;oe=5F123DCD 480w,https://instagram.fdel1-3.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/c0.180.1440.1440a/s640x640/104298250_558037038207632_4572936380148135183_n.jpg?_nc_ht=instagram.fdel1-3.fna.fbcdn.net&amp;_nc_cat=1&amp;_nc_ohc=48zbu221S28AX9bf2wm&amp;oh=66133aff2c027fb95ab1419253cfdd31&amp;oe=5F1311C4 640w" src="https://instagram.fdel1-3.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/c0.180.1440.1440a/s640x640/104298250_558037038207632_4572936380148135183_n.jpg?_nc_ht=instagram.fdel1-3.fna.fbcdn.net&amp;_nc_cat=1&amp;_nc_ohc=48zbu221S28AX9bf2wm&amp;oh=66133aff2c027fb95ab1419253cfdd31&amp;oe=5F1311C4" style="object-fit: cover;">
+       <img src='https://instagram.fdel1-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/s640x640/101521086_669122623665322_2577338025514501499_n.jpg?_nc_ht=instagram.fdel1-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=4Rm7QyVzrbsAX_1M8qI&oh=f2851d87724c9aadd6f8731719544e5c&oe=5F147037'>
+       <img src='https://instagram.fdel1-3.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/c0.169.1349.1349a/s640x640/100997171_294137304935173_5707609764834803460_n.jpg?_nc_ht=instagram.fdel1-3.fna.fbcdn.net&_nc_cat=1&_nc_ohc=GI0ePw2vC3wAX-8n-gh&oh=aee2d8c533c2285d1f9b21f464092125&oe=5F11C07F'>
+       <img src='https://instagram.fdel1-3.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/c0.169.1349.1349a/s640x640/100666379_188806665643384_3896688828975370064_n.jpg?_nc_ht=instagram.fdel1-3.fna.fbcdn.net&_nc_cat=1&_nc_ohc=KK5avrxhEqIAX_TbmiA&oh=9a754284655a9e0a7a96dabd239509b7&oe=5F12F062'>
+    </div>
+
+    <div id='images'>
+        <img src='https://instagram.fdel1-3.fna.fbcdn.net/v/t51.2885-15/e35/s320x320/100898960_698094117644946_5421229625457270821_n.jpg?_nc_ht=instagram.fdel1-3.fna.fbcdn.net&_nc_cat=1&_nc_ohc=aqNlIk6OEoYAX9MCGg3&oh=84d905444179355980b8bd1280f9fbb6&oe=5F1181F5'>
+      <img src='https://instagram.fdel1-3.fna.fbcdn.net/v/t51.2885-15/e35/c0.169.1349.1349a/s320x320/97249868_604016993535237_3443931848117355368_n.jpg?_nc_ht=instagram.fdel1-3.fna.fbcdn.net&_nc_cat=1&_nc_ohc=FtGY4dzRbAEAX_KPGqQ&oh=e7531fbcf788170654a2b1b27e946624&oe=5F1407F1'>
+       <img src='https://instagram.fdel1-3.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/c0.169.1349.1349a/s640x640/94928602_822602978231046_8493666583539336905_n.jpg?_nc_ht=instagram.fdel1-3.fna.fbcdn.net&_nc_cat=106&_nc_ohc=zBwIbrIZeGoAX8KY35s&oh=df01f44fdb856191c1832bc4eae4c4e9&oe=5F121715'>
+       <img src='https://instagram.fdel1-2.fna.fbcdn.net/v/t51.2885-15/e35/c133.0.561.561a/s320x320/103097101_285654252481795_8808760636381151491_n.jpg?_nc_ht=instagram.fdel1-2.fna.fbcdn.net&_nc_cat=107&_nc_ohc=qfV47o_6U0oAX9ZX_Jw&oh=128b4809ec46bd4f737a90d192f41597&oe=5F117C49'>
+    </div>
+
+    <div id='images'>
+        <img src='https://instagram.fdel1-2.fna.fbcdn.net/v/t51.2885-15/e35/92022831_146623786863028_6274520438788977337_n.jpg?_nc_ht=instagram.fdel1-2.fna.fbcdn.net&_nc_cat=104&_nc_ohc=QQxBVs0wjlAAX8AI_Ja&oh=4ee5eba80f8d4cfd2552a11cea5a2cf6&oe=5F143B4E'>
+      <img src='https://instagram.fdel1-2.fna.fbcdn.net/v/t51.2885-15/e35/c87.0.575.575a/90145884_495229534688440_7049357998634361866_n.jpg?_nc_ht=instagram.fdel1-2.fna.fbcdn.net&_nc_cat=104&_nc_ohc=x1pdcEz60n8AX-ZpBIu&oh=d63ee073c5e37c7038137b1e1536ba4f&oe=5F1281E5'>
+       <img src='https://instagram.fdel1-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/s640x640/89749964_227392001737521_253090090759659071_n.jpg?_nc_ht=instagram.fdel1-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=sn9x6jirMvMAX-TV6PM&oh=4080e3db8546caebed762c3ed1c3c393&oe=5F13413D'>
+       <img src='https://instagram.fdel1-2.fna.fbcdn.net/v/t51.2885-15/e35/c0.7.1440.1440a/s480x480/89833190_1417004481816979_8446871348534697075_n.jpg?_nc_ht=instagram.fdel1-2.fna.fbcdn.net&_nc_cat=107&_nc_ohc=teudeDnsoEYAX_9a96Z&oh=e0abaa8a65bd51206b499e9df39e65ac&oe=5F125C96'>
+    </div>
+</section>
